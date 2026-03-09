@@ -31,6 +31,8 @@ Este repositorio contiene una aplicación web sencilla construida con FastAPI, e
 
 ## Ejecución con Docker
 
+### Opción 1: Construir y ejecutar localmente
+
 1. Construye la imagen de Docker:
    ```bash
    docker build -t fastapi-app .
@@ -40,6 +42,30 @@ Este repositorio contiene una aplicación web sencilla construida con FastAPI, e
    docker run -d -p 5000:5000 --name mi-fastapi fastapi-app
    ```
 3. Visita la aplicación en tu navegador: [http://localhost:5000](http://localhost:5000)
+
+### Opción 2: Ejecutar la imagen desde Docker Hub
+
+1. Descarga y ejecuta la imagen directamente desde Docker Hub:
+   ```bash
+   docker run -d -p 5000:5000 --name mi-fastapi 300891/fastapi-app:latest
+   ```
+2. Visita la aplicación en tu navegador: [http://localhost:5000](http://localhost:5000)
+
+### Comandos útiles para Docker
+
+```bash
+# Ver contenedores en ejecución
+docker ps
+
+# Ver logs del contenedor
+docker logs mi-fastapi
+
+# Detener el contenedor
+docker stop mi-fastapi
+
+# Eliminar el contenedor
+docker rm mi-fastapi
+```
 
 ## Pruebas Unitarias
 
